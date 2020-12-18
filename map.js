@@ -1,4 +1,3 @@
-
 /*global rawData */
 let Mapinator = function(parentDom) {
 
@@ -42,10 +41,10 @@ let Mapinator = function(parentDom) {
       tiles.addTo(mymap);
 
 
-      this.update = function(data) {
+      this.update = function(inputData) {
             // Lora, GPS, WiFi
-            data = jsonToDataObjects(data);
-            console.log(data);
+            data = jsonToDataObjects(inputData);
+            // console.log(data);
             createDeviceList();
       };
       //this.update();
@@ -78,6 +77,7 @@ let Mapinator = function(parentDom) {
             cols[1].innerHTML = '';
             //um die einzelnen devices herauszukriegen
             let counts = {};
+            console.log(data);
             for (let i = 0; i < data[0].length; i++) {
                   counts[data[0][i].DeviceId] = 1 + (counts[data[0][i].DeviceId] || 0);
             }
@@ -86,7 +86,7 @@ let Mapinator = function(parentDom) {
                   createDeviceIdCheckboxes(Object.keys(counts)[i]);
             }
       };
-    //   createDeviceList();
+      //   createDeviceList();
 
       function plotData(dataGeneric, colorCircle, TechIndex) {
             console.log(dataGeneric);
@@ -368,3 +368,4 @@ let Mapinator = function(parentDom) {
 };
 
 let m = new Mapinator(document.getElementById('container'));
+m.update((rawData));
