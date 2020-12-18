@@ -1,0 +1,57 @@
+<! https://www.techiedelight.com/dynamically-create-checkbox-with-javascript/>
+<! https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns/>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
+      integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
+      crossorigin=""
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script
+      src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+      integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
+      crossorigin=""
+    ></script>
+    <style>
+      #Map {
+        height: 560px;
+      }
+    </style>
+
+    <title>Fetch JSON from API and map lat lon</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 33.3%;
+        padding: 10px;
+       height: 300px; /* Should be removed. Only for demonstration */
+      }
+
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Geo Location Map</h1>
+    <div id="container"></div>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="rawdata.js"></script>
+    <script src="map.js"></script>
+  </body>
+</html>
